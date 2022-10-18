@@ -1,0 +1,19 @@
+{
+    "name": "prudenco-pc/cursos_proyecto6_bienesraices",
+    "authors": [
+        {
+            "name": "prudencio2000",
+            "email": "50462753+prudencio2000@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\":"./models",
+            "MVC\\":"./",
+            "Controllers\\":"./controllers"
+        }
+    }
+}
