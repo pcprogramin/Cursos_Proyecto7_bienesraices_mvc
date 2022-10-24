@@ -6,8 +6,8 @@
             <?php echo $error ?>
         </div>
     <?php endforeach; ?>
-    <form class="formulario" method="POST" enctype="multipart/form-data" action="/admin/vendedores/crear.php">
-        <?php include '../../includes/templates/formulario_vendedores.php' ?>
+    <form class="formulario" method="POST" enctype="multipart/form-data" action="/vendedores/crear">
+        <?php include 'formulario.php' ?>
         <input type="submit" value="Registrar Vendedor" class="boton boton-verde">
     </form>
 </main>

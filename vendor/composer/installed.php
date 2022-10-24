@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'prudenco-pc/cursos_proyecto6_bienesraices',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '9fdfcdc42e373379221409299f0c77f1ace36947',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -29,9 +29,9 @@
             'dev_requirement' => false,
         ),
         'prudenco-pc/cursos_proyecto6_bienesraices' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '9fdfcdc42e373379221409299f0c77f1ace36947',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
