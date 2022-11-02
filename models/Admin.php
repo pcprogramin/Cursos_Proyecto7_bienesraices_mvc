@@ -2,7 +2,7 @@
 namespace Model;
 
 class Admin extends ActiveRecord{
-    protected static $table = 'usuarios';
+    protected static $table = 'usuario';
     protected static $columnasDB =['id','email','password'];
     
     public $id;
@@ -25,7 +25,8 @@ class Admin extends ActiveRecord{
         return self::$errores;
     }
     public function existeUsuario (){
-        $query = "SELECT * FROM ".self::$tabla." WHERE email ='".$this->email."' LIMIT 1";
+        $query = "SELECT * FROM ".self::$table." WHERE email ='".$this->email."' ";
+        
         $resultado = self::$db->query($query);
         if (!$resultado->num_rows){
             self::$errores[]='El usario no existe';

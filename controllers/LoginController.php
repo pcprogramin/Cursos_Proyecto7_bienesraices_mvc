@@ -26,7 +26,7 @@ class LoginController{
             'errores'=>$errores,
         ]);
     }
-    public static function logout (Router $router){
+    public static function logout (){
         session_start();
         $_SESSION = [];
         header('Location: /');

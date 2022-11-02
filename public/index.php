@@ -32,6 +32,6 @@ $router->get('/contacto',[PaginasController::class,'contacto']);
 $router->post('/contacto',[PaginasController::class,'contacto']);
 
 $router -> get('/login',[LoginController::class,'login']); 
-$router -> get('/logut',[LoginController::class,'loguot']); 
+$router -> get('/logout',[LoginController::class,'logout']); 
 $router -> post('/login',[LoginController::class,'login']); 
 $router->comprobarRutas();
