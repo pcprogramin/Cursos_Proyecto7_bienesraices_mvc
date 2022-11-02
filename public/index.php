@@ -1,6 +1,8 @@
 <?php
 require __DIR__.'/../includes/app.php';
 
+use Controllers\LoginController;
+use Controllers\PaginasController;
 use MVC\Router;
 use Controllers\PropiedadController;
 use Controllers\VendedorController;
@@ -20,5 +22,16 @@ $router->get('/vendedores/actualizar',[VendedorController::class,'actualizar']);
 $router->post('/vendedores/actualizar',[VendedorController::class,'actualizar']);
 $router->post('/vendedores/eliminar',[VendedorController::class,'eliminar']);
 
+$router->get('/',[PaginasController::class,'index']);
+$router->get('/nosotros',[PaginasController::class,'nosotros']);
+$router->get('/propiedades',[PaginasController::class,'propiedades']);
+$router->get('/propiedad',[PaginasController::class,'propiedad']);
+$router->get('/blog',[PaginasController::class,'blog']);
+$router->get('/entrada',[PaginasController::class,'entrada']);
+$router->get('/contacto',[PaginasController::class,'contacto']);
+$router->post('/contacto',[PaginasController::class,'contacto']);
 
+$router -> get('/login',[LoginController::class,'login']); 
+$router -> get('/logut',[LoginController::class,'loguot']); 
+$router -> post('/login',[LoginController::class,'login']); 
 $router->comprobarRutas();

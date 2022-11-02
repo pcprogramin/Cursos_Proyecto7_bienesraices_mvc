@@ -13,12 +13,21 @@ class Router{
         $this->rutasPost[$url]=$fn;
     }
     public function comprobarRutas(){
+        session_start();
+        $auth = $_SESSION ['login'] ?? null;
+
+        $rutas_protegidas =['/admin','propiedades/crear','propiedades/actualizar','propiedades/eliminar',
+        'vendedores/crear','vendedores/actualizar','vendedores/eliminar'];
+
         $urlActual =$_SERVER['PATH_INFO'] ?? '/';
         $metodo = $_SERVER['REQUEST_METHOD'];
         if ($metodo === 'GET'){
             $fn = $this->rutasGet[$urlActual] ?? NULL;
         }else{
             $fn = $this->rutasPost[$urlActual] ?? NULL;
+        }
+        if (in_array($urlActual,$rutas_protegidas) && !$auth){
+            header('Location:/');
         }
         if($fn){
             call_user_func($fn,$this);
